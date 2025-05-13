@@ -1,0 +1,31 @@
+user {{ nginx_user }};
+worker_processes {{ nginx_worker_processes }};
+
+events {
+    worker_connections {{ nginx_worker_connections }};
+}
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    server {
+        listen 80;
+        server_name {{ nginx_server_name }};
+        root /var/www/html;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
+
+    server {
+        listen 443;
+        server_name {{ nginx_server_name }};
+        root /var/www/html;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
+}

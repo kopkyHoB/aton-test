@@ -1,5 +1,7 @@
-#Задание 1 
+# Задание 1 
+
 Template nginx.conf в /task1/templates
+
 Playbook и log в /task1
 
 Запуск playbook:
@@ -7,9 +9,12 @@ Playbook и log в /task1
 sudo ansible-playbook ansible-playbook.yml 
 ```
 
-#Задание 2
+# Задание 2
+
 Файлы *dockerfile*, *docker-compose.yml* лежат в /task-2
+
 Сертификат и ключ лежат в /task-2/certs
+
 HTML лежит в /task-2/html
 
 Создадим сертификат и приватный ключ, которые потом окажутся в контейнере:

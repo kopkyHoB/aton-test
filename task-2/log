@@ -1,0 +1,45 @@
+user@pc:~$ curl -vk https://localhost:443 
+* Host localhost:443 was resolved.
+* IPv6: ::1
+* IPv4: 127.0.0.1
+*   Trying [::1]:443...
+* Connected to localhost (::1) port 443
+* ALPN: curl offers h2,http/1.1
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / RSASSA-PSS
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: C=RU; ST=Some-State; O=ATON
+*  start date: May 13 14:05:31 2025 GMT
+*  expire date: May 13 14:05:31 2026 GMT
+*  issuer: C=RU; ST=Some-State; O=ATON
+*  SSL certificate verify result: self-signed certificate (18), continuing anyway.
+*   Certificate level 0: Public key type RSA (4096/152 Bits/secBits), signed using sha256WithRSAEncryption
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: localhost
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* old SSL session ID is stale, removing
+< HTTP/1.1 200 OK
+< Server: nginx/1.27.5
+< Date: Tue, 13 May 2025 14:15:40 GMT
+< Content-Type: text/html
+< Content-Length: 16
+< Last-Modified: Tue, 13 May 2025 11:45:27 GMT
+< Connection: keep-alive
+< ETag: "682330d7-10"
+< Accept-Ranges: bytes
+< 
+* Connection #0 to host localhost left intact
+<h1>kek lol</h1>

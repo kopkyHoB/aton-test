@@ -1,8 +1,8 @@
 # Задание 1 
 
-Template nginx.conf в /task1/templates
+Template nginx.conf в /task-1/templates
 
-Playbook и log в /task1
+Playbook и log в /task-1
 
 Запуск playbook:
 ```bash
@@ -26,4 +26,31 @@ openssl req -nodes -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 36
 
 ```bash
 docker-compose up -d --build
+```
+
+# Задание 3
+
+Файл скрипта лежит в /task-3
+
+Для реализации была настроена отправка почты через ssmtp
+
+Файл конфигурации *ssmtp.conf*
+
+```
+root=example@yandex.ru
+mailhub=smtp.yandex.ru:465
+AuthUser=example@yandex.ru
+AuthPass=pass
+UseTLS=YES
+UseSTARTTLS=NO
+RewriteDomain=yandex.ru
+Hostname=smtp.yandex.ru:465
+FromLineOverride=YES
+```
+
+Файл *revaliases*
+
+```
+user:example@yandex.ru
+root:example@yandex.ru:smtp.yandex.ru:465
 ```

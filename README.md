@@ -54,3 +54,11 @@ FromLineOverride=YES
 user:example@yandex.ru
 root:example@yandex.ru:smtp.yandex.ru:465
 ```
+
+# Задание 3
+
+Файлы скриптов для *deploy* и *build*, файлы логов и *.yml* файл пайплайна лежат в /task-4
+
+Задание было реализовано при помощи GitHub Actions
+
+Сам репо, который использовался для реализации: https://github.com/kopkyHoB/test-repo/

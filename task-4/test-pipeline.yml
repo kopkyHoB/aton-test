@@ -1,0 +1,23 @@
+name: Простенький пайплайн билд/деплой
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3    
+    - name: Билд!
+      run: ./build.sh
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Деплой!
+      run: ./deploy.sh
+      env:
+        IMAGE_ID: ${{ env.IMAGE_ID }}

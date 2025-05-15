@@ -1,0 +1,165 @@
+2025-05-15T22:01:50.2441675Z Current runner version: '2.323.0'
+2025-05-15T22:01:50.2465197Z ##[group]Runner Image Provisioner
+2025-05-15T22:01:50.2466021Z Hosted Compute Agent
+2025-05-15T22:01:50.2466655Z Version: 20250212.272
+2025-05-15T22:01:50.2467289Z Commit: 0fa0ec56e6a1633f63f796a53b5481d2fb788656
+2025-05-15T22:01:50.2467945Z Build Date: 2025-02-12T23:33:09Z
+2025-05-15T22:01:50.2468583Z ##[endgroup]
+2025-05-15T22:01:50.2469139Z ##[group]Operating System
+2025-05-15T22:01:50.2469742Z Ubuntu
+2025-05-15T22:01:50.2470206Z 24.04.2
+2025-05-15T22:01:50.2470797Z LTS
+2025-05-15T22:01:50.2471272Z ##[endgroup]
+2025-05-15T22:01:50.2471781Z ##[group]Runner Image
+2025-05-15T22:01:50.2472444Z Image: ubuntu-24.04
+2025-05-15T22:01:50.2473225Z Version: 20250427.1.0
+2025-05-15T22:01:50.2474247Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250427.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-05-15T22:01:50.2475811Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250427.1
+2025-05-15T22:01:50.2476772Z ##[endgroup]
+2025-05-15T22:01:50.2477957Z ##[group]GITHUB_TOKEN Permissions
+2025-05-15T22:01:50.2479738Z Contents: read
+2025-05-15T22:01:50.2480399Z Metadata: read
+2025-05-15T22:01:50.2480901Z Packages: read
+2025-05-15T22:01:50.2481422Z ##[endgroup]
+2025-05-15T22:01:50.2483613Z Secret source: Actions
+2025-05-15T22:01:50.2484428Z Prepare workflow directory
+2025-05-15T22:01:50.2810990Z Prepare all required actions
+2025-05-15T22:01:50.2849327Z Getting action download info
+2025-05-15T22:01:50.8447059Z ##[group]Download immutable action package 'actions/checkout@v3'
+2025-05-15T22:01:50.8448084Z Version: 3.6.0
+2025-05-15T22:01:50.8449044Z Digest: sha256:942562b9c7d4b1f2557f1da21f4d3eb4eb4fd01f2ad78b2a6e187d1b193e0a0f
+2025-05-15T22:01:50.8450275Z Source commit SHA: f43a0e5ff2bd294095638e18286ca9a3d1956744
+2025-05-15T22:01:50.8451039Z ##[endgroup]
+2025-05-15T22:01:51.2303330Z Complete job name: build
+2025-05-15T22:01:51.3019419Z ##[group]Run actions/checkout@v3
+2025-05-15T22:01:51.3020250Z with:
+2025-05-15T22:01:51.3020707Z   repository: kopkyHoB/test-repo
+2025-05-15T22:01:51.3021348Z   token: ***
+2025-05-15T22:01:51.3021748Z   ssh-strict: true
+2025-05-15T22:01:51.3022174Z   persist-credentials: true
+2025-05-15T22:01:51.3022647Z   clean: true
+2025-05-15T22:01:51.3023313Z   sparse-checkout-cone-mode: true
+2025-05-15T22:01:51.3023828Z   fetch-depth: 1
+2025-05-15T22:01:51.3024238Z   fetch-tags: false
+2025-05-15T22:01:51.3024631Z   lfs: false
+2025-05-15T22:01:51.3025009Z   submodules: false
+2025-05-15T22:01:51.3025415Z   set-safe-directory: true
+2025-05-15T22:01:51.3026155Z ##[endgroup]
+2025-05-15T22:01:51.3871129Z Syncing repository: kopkyHoB/test-repo
+2025-05-15T22:01:51.3872803Z ##[group]Getting Git version info
+2025-05-15T22:01:51.3873689Z Working directory is '/home/runner/work/test-repo/test-repo'
+2025-05-15T22:01:51.3874626Z [command]/usr/bin/git version
+2025-05-15T22:01:51.4624003Z git version 2.49.0
+2025-05-15T22:01:51.4651293Z ##[endgroup]
+2025-05-15T22:01:51.4666476Z Temporarily overriding HOME='/home/runner/work/_temp/602d5c02-a74d-4827-bc38-ef339f52598b' before making global git config changes
+2025-05-15T22:01:51.4668287Z Adding repository directory to the temporary git global config as a safe directory
+2025-05-15T22:01:51.4670333Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/test-repo/test-repo
+2025-05-15T22:01:51.4747203Z Deleting the contents of '/home/runner/work/test-repo/test-repo'
+2025-05-15T22:01:51.4751087Z ##[group]Initializing the repository
+2025-05-15T22:01:51.4754972Z [command]/usr/bin/git init /home/runner/work/test-repo/test-repo
+2025-05-15T22:01:51.5150123Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-05-15T22:01:51.5151661Z hint: is subject to change. To configure the initial branch name to use in all
+2025-05-15T22:01:51.5152722Z hint: of your new repositories, which will suppress this warning, call:
+2025-05-15T22:01:51.5153814Z hint:
+2025-05-15T22:01:51.5154345Z hint: 	git config --global init.defaultBranch <name>
+2025-05-15T22:01:51.5155301Z hint:
+2025-05-15T22:01:51.5155933Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-05-15T22:01:51.5156999Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-05-15T22:01:51.5157825Z hint:
+2025-05-15T22:01:51.5158251Z hint: 	git branch -m <name>
+2025-05-15T22:01:51.5233909Z Initialized empty Git repository in /home/runner/work/test-repo/test-repo/.git/
+2025-05-15T22:01:51.5244887Z [command]/usr/bin/git remote add origin https://github.com/kopkyHoB/test-repo
+2025-05-15T22:01:51.5319231Z ##[endgroup]
+2025-05-15T22:01:51.5320403Z ##[group]Disabling automatic garbage collection
+2025-05-15T22:01:51.5322422Z [command]/usr/bin/git config --local gc.auto 0
+2025-05-15T22:01:51.5348936Z ##[endgroup]
+2025-05-15T22:01:51.5350091Z ##[group]Setting up auth
+2025-05-15T22:01:51.5355183Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-05-15T22:01:51.5382114Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-05-15T22:01:51.6696862Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-05-15T22:01:51.6701025Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-05-15T22:01:51.6926086Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-05-15T22:01:51.6959620Z ##[endgroup]
+2025-05-15T22:01:51.6960643Z ##[group]Fetching the repository
+2025-05-15T22:01:51.6968412Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +9e3e491d1f723468c7f2e1828379afd16f63d6b1:refs/remotes/origin/main
+2025-05-15T22:01:52.3246079Z remote: Enumerating objects: 8, done.        
+2025-05-15T22:01:52.3247116Z remote: Counting objects:  12% (1/8)        
+2025-05-15T22:01:52.3247973Z remote: Counting objects:  25% (2/8)        
+2025-05-15T22:01:52.3248722Z remote: Counting objects:  37% (3/8)        
+2025-05-15T22:01:52.3249485Z remote: Counting objects:  50% (4/8)        
+2025-05-15T22:01:52.3250219Z remote: Counting objects:  62% (5/8)        
+2025-05-15T22:01:52.3250925Z remote: Counting objects:  75% (6/8)        
+2025-05-15T22:01:52.3251620Z remote: Counting objects:  87% (7/8)        
+2025-05-15T22:01:52.3252352Z remote: Counting objects: 100% (8/8)        
+2025-05-15T22:01:52.3253309Z remote: Counting objects: 100% (8/8), done.        
+2025-05-15T22:01:52.3254068Z remote: Compressing objects:  16% (1/6)        
+2025-05-15T22:01:52.3254827Z remote: Compressing objects:  33% (2/6)        
+2025-05-15T22:01:52.3255614Z remote: Compressing objects:  50% (3/6)        
+2025-05-15T22:01:52.3256347Z remote: Compressing objects:  66% (4/6)        
+2025-05-15T22:01:52.3257107Z remote: Compressing objects:  83% (5/6)        
+2025-05-15T22:01:52.3257826Z remote: Compressing objects: 100% (6/6)        
+2025-05-15T22:01:52.3258622Z remote: Compressing objects: 100% (6/6), done.        
+2025-05-15T22:01:52.3262532Z remote: Total 8 (delta 0), reused 8 (delta 0), pack-reused 0 (from 0)        
+2025-05-15T22:01:52.3573787Z From https://github.com/kopkyHoB/test-repo
+2025-05-15T22:01:52.3574750Z  * [new ref]         9e3e491d1f723468c7f2e1828379afd16f63d6b1 -> origin/main
+2025-05-15T22:01:52.3645543Z ##[endgroup]
+2025-05-15T22:01:52.3646634Z ##[group]Determining the checkout info
+2025-05-15T22:01:52.3648135Z ##[endgroup]
+2025-05-15T22:01:52.3649378Z ##[group]Checking out the ref
+2025-05-15T22:01:52.3653390Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-05-15T22:01:52.3735824Z Switched to a new branch 'main'
+2025-05-15T22:01:52.3738739Z branch 'main' set up to track 'origin/main'.
+2025-05-15T22:01:52.3744835Z ##[endgroup]
+2025-05-15T22:01:52.3775524Z [command]/usr/bin/git log -1 --format='%H'
+2025-05-15T22:01:52.3796299Z '9e3e491d1f723468c7f2e1828379afd16f63d6b1'
+2025-05-15T22:01:52.3970902Z ##[group]Run ./build.sh
+2025-05-15T22:01:52.3971396Z [36;1m./build.sh[0m
+2025-05-15T22:01:52.4006018Z shell: /usr/bin/bash -e {0}
+2025-05-15T22:01:52.4006475Z ##[endgroup]
+2025-05-15T22:01:55.4993164Z #0 building with "default" instance using docker driver
+2025-05-15T22:01:55.4994143Z 
+2025-05-15T22:01:55.4994542Z #1 [internal] load build definition from dockerfile
+2025-05-15T22:01:55.4995255Z #1 transferring dockerfile: 137B done
+2025-05-15T22:01:55.4995659Z #1 DONE 0.0s
+2025-05-15T22:01:55.4995836Z 
+2025-05-15T22:01:55.4996104Z #2 [internal] load metadata for docker.io/library/alpine:latest
+2025-05-15T22:01:55.7521905Z #2 ...
+2025-05-15T22:01:55.7522308Z 
+2025-05-15T22:01:55.7522769Z #3 [auth] library/alpine:pull token for registry-1.docker.io
+2025-05-15T22:01:55.7524122Z #3 DONE 0.0s
+2025-05-15T22:01:55.9022366Z 
+2025-05-15T22:01:55.9023101Z #2 [internal] load metadata for docker.io/library/alpine:latest
+2025-05-15T22:01:56.3603823Z #2 DONE 1.0s
+2025-05-15T22:01:56.4897467Z 
+2025-05-15T22:01:56.4899099Z #4 [internal] load .dockerignore
+2025-05-15T22:01:56.4899568Z #4 transferring context: 2B done
+2025-05-15T22:01:56.4899901Z #4 DONE 0.0s
+2025-05-15T22:01:56.4900056Z 
+2025-05-15T22:01:56.4900563Z #5 [1/1] FROM docker.io/library/alpine:latest@sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c
+2025-05-15T22:01:56.4901669Z #5 resolve docker.io/library/alpine:latest@sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c done
+2025-05-15T22:01:56.4902682Z #5 sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c 9.22kB / 9.22kB done
+2025-05-15T22:01:56.4903978Z #5 sha256:1c4eef651f65e2f7daee7ee785882ac164b02b78fb74503052a26dc061c90474 1.02kB / 1.02kB done
+2025-05-15T22:01:56.4904878Z #5 sha256:aded1e1a5b3705116fa0a92ba074a5e0b0031647d9c315983ccba2ee5428ec8b 581B / 581B done
+2025-05-15T22:01:56.4905751Z #5 sha256:f18232174bc91741fdf3da96d85011092101a032a93a388b79e99e69c2d5c870 0B / 3.64MB 0.1s
+2025-05-15T22:01:56.6459514Z #5 sha256:f18232174bc91741fdf3da96d85011092101a032a93a388b79e99e69c2d5c870 3.64MB / 3.64MB 0.2s done
+2025-05-15T22:01:56.6460669Z #5 extracting sha256:f18232174bc91741fdf3da96d85011092101a032a93a388b79e99e69c2d5c870 0.1s done
+2025-05-15T22:01:56.6933216Z #5 DONE 0.3s
+2025-05-15T22:01:56.6933519Z 
+2025-05-15T22:01:56.6933999Z #6 exporting to image
+2025-05-15T22:01:56.6934517Z #6 exporting layers done
+2025-05-15T22:01:56.6936681Z #6 writing image sha256:bcdf9ff3eac0a6ad74477f2b040c9cdf6e388359a424dc42fecd8260756f0bbf done
+2025-05-15T22:01:56.6937658Z #6 naming to docker.io/library/test-image done
+2025-05-15T22:01:56.6938085Z #6 DONE 0.0s
+2025-05-15T22:01:56.7158568Z Post job cleanup.
+2025-05-15T22:01:56.7870099Z [command]/usr/bin/git version
+2025-05-15T22:01:56.7904770Z git version 2.49.0
+2025-05-15T22:01:56.7949529Z Temporarily overriding HOME='/home/runner/work/_temp/f68eaaff-b62a-4694-bb3d-aaaeec8454c1' before making global git config changes
+2025-05-15T22:01:56.7950880Z Adding repository directory to the temporary git global config as a safe directory
+2025-05-15T22:01:56.7954454Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/test-repo/test-repo
+2025-05-15T22:01:56.7986760Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-05-15T22:01:56.8015769Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-05-15T22:01:56.8268497Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-05-15T22:01:56.8291471Z http.https://github.com/.extraheader
+2025-05-15T22:01:56.8302404Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-05-15T22:01:56.8330989Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-05-15T22:01:56.8648461Z Cleaning up orphan processes

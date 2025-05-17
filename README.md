@@ -55,10 +55,16 @@ user:example@yandex.ru
 root:example@yandex.ru:smtp.yandex.ru:465
 ```
 
-# Задание 3
+# Задание 4
 
 Файлы скриптов для *deploy* и *build*, файлы логов и *.yml* файл пайплайна лежат в /task-4
 
 Задание было реализовано при помощи GitHub Actions
 
 Сам репо, который использовался для реализации: https://github.com/kopkyHoB/test-repo/
+
+# Задание 5
+
+Файл конфигурации *main.tf*, и файлы для объявления переменных *terraform.tf*, *variables.tfvars* лежат в /task-5
+
+Скриншоты работы ВМ в /task-5/screenshots
